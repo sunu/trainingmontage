@@ -54,7 +54,7 @@ body {
 
 .step {
   clear:both;
-  height:400px;
+  min-height:400px;
   position:relative;
 }
 
@@ -63,4 +63,8 @@ body {
   line-height: 1em;
   text-align: center;
 
+}
+
+ul{
+  list-style: none;
 }

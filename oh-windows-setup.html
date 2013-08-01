@@ -1,0 +1,249 @@
+<html>
+<head>
+  <title>Missions: Finding the command line on Windows</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="magic.js"></script>
+</head>
+<body>
+  <div id="floater">
+  </div>
+
+  <div id="begin" class="step initial">
+    <h1>What we recommend and why</h1>
+    <p>Most development tools for contributing to free, open source
+    software projects are built with simple text-based
+    interfaces. This includes UNIX-like tools such as diff and tar,
+    often provided by
+    <a href="http://www.gnu.org/">the GNU project</a>.</p>
+
+    <p>Many Windows users never learn about the command line, so these
+    tools can seem arcane or intimidating. You can relax; the tools
+    are often simple to use once you have them properly installed and
+    can run them easily. We wrote this set of instructions so that you
+    can get used to them and dive into the training missions as easily
+    as possible.</p>
+
+    <p>We chose what we think is the best source for these
+      programs. You'll use Git Bash, a project that is under active
+      maintenance and creates a prompt on Windows that is similar to a
+      UNIX-like system. These tools run within Windows, and are easy
+      to uninstall whenever you want to.  You will be able to refer to
+      our quick reference for a refresher of what you learn in this
+      tutorial. If you already think you might have these tools
+      installed a different way, or want to learn about other ways to
+      install them, read the "Alternatives" section on the left.</p>
+    <p> 
+      <span class="button" next="install">Go forward and install "Git Bash"! &raquo;</span>
+    </p>
+  </div>
+
+  <div id="install" class="step">
+    <h1>Install Git Bash</h1>
+    <p>Git Bash has a silly name. It's comprised of two parts:</p>
+
+    <ul class="raquo_bullets">
+      <li><tt>git</tt>: a version control tool we have a training mission about, and</li>
+      <li><tt>bash</tt>: a shell that runs commands once you type the name of a command and press &lt;enter&gt; on your keyboard.</li>
+    </ul>
+
+    <p>To install it, go to the
+      <a href="http://code.google.com/p/msysgit/downloads/list?q=label:Featured">msysgit featured downloads list</a>
+      and find the most recent "Full installer." At the time of writing, it is called "Git-1.7.8-preview20111206.exe". Click on that link, and click again to download the file.</p>
+
+    <p>Find the file on your computer, and run it. You'll see a series of questions; <strong>we recommend accepting the defaults</strong>.</p>
+
+    <p>If you want to see what the screens will look like,
+      <a target="_blank" href="http://help.github.com/win-set-up-git/">see these screenshots</a>.</p>
+    <p><span class="button" next="open-bash">Hooray! Next, learn how to use this prompt! &raquo;</span></p>
+  </div>
+  
+  <div id="open-bash" class="step">
+    <h1>Open the Git Bash prompt</h1>
+    <p>In this section, we will make sure you can open the Git Bash prompt that you just installed. To launch it:</p>
+
+    <ul class="raquo_bullets">
+      <li>Click the Windows or Start icon</li>
+      <li>In the Programs list, open the Git folder</li>
+      <li>Click the option for Git Bash.</li>
+    </ul>
+
+    <p>(Don't be distracted by the "Git GUI" program. In this tutorial, we use "Git Bash.")</p>
+
+    <p>You should see a new window that looks like
+      <a target="_blank" href="http://www.prosoftstudio.com/wp-content/uploads/2011/05/01-Open-Git-Bash.png">this screenshot</a>.</p>
+    <p><span class="button" next="understand-prompt">Once you have it running, let's see how to use it!! &raquo;</span>
+    </p>
+  </div>
+
+  <div id="understand-prompt" class="step">
+    <h1>Understanding the prompt and running programs</h1>
+    <p>With Git Bash open, you see a black box with white text. It will look something like
+          <a target="_blank" href="http://www.prosoftstudio.com/wp-content/uploads/2011/05/01-Open-Git-Bash.png">this screenshot.</a></p>
+
+    <p>The prompt, provided by bash, shows you:</p>
+    <ul class="raquo_bullets">
+      <li>Your username on your computer</li>
+      <li>Your computer's name</li>
+      <li>The current working directory</li>
+    </ul>
+
+    <p>It is called a "prompt" because bash is waiting for you to tell it what to do!</p>
+
+    <p>You can type commands into this prompt and it will print the result. For example, type the following command and press enter. The program you execute will print your username and then exit; once it exits, the prompt awaits your next instruction.</p>
+
+    <blockquote><tt>whoami</tt></blockquote>
+
+    <p>Because this runs in the same environment as your other Windows apps, you can even launch graphical Windows programs from this prompt. For example, type just:</p>
+
+    <blockquote><tt>control</tt></blockquote>
+
+    <p>into the prompt, and press enter. You should see the Windows Control Panel open up in a separate window!</p>
+
+    <p>
+    <span class="button" next="navigating">Read on to learn about browsing files and folders &raquo;</span>
+    </p>
+  </div>
+
+  <div id="navigating" class="step">
+    <h1>Navigating through folders</h1>
+    <p>When Git Bash opens, it starts "in" your user folder on your
+        computer. The bash prompt shows you the current working directory,
+        abbreviated slightly. You can see the full path by typing this and
+        pressing enter:</p>
+
+    <blockquote><tt>pwd</blockquote></tt>
+
+    <p>Short, abbreviated command names are common in bash. This
+    stands for "Print Working Directory." (Directory is another term
+    for folder.)</p>
+
+    <p>You can list the files and folders that are underneath the current working directory by typing:</p>
+
+    <blockquote><tt>ls</tt></blockquote>
+
+    <p>You'll find an entry labeled "Desktop" You can change into that directory with "cd":</p>
+
+    <blockquote><tt>cd Desktop</tt></blockquote>
+
+    <p>You should see that the prompt has changed to reflect that you
+    are "in" the Desktop. Now when you ask for a directory
+    listing:</p>
+
+    <blockquote><tt>ls</tt></blockquote>
+
+    <p>You'll see all the things on your computer's desktop. If your
+    desktop is empty, try creating a file and saving it on the
+    desktop. Once you've done that, if you run "ls" again, you will
+    see your new file.</p>
+
+    <p>You can change to the directory "above" the current working directory by using a special name, "..". Try typing these commands and pressing enter after each one:</p>
+
+    <blockquote><tt>cd ..<br>
+    ls</tt></blockquote>
+
+    <p>You should see the same directory listing as you saw first!</p>
+
+    <p>This concludes our tutorial. You might enjoy referring to the quick reference later on. For now, we suggest you go...</p>
+    
+    <p>
+    <span class="button"><a href="http://openhatch.org/missions/">On to the training missions! &raquo;</a></span>
+    <span class="button" next="quick-reference">Quick Reference &raquo;</span>
+    </p>
+  </div>
+
+  <div id="quick-reference" class="step">
+    <h1>Quick reference</h1>
+    <p>To launch git bash:</p>
+    <ul class="raquo_bullets">
+      <li>Start -> Programs -> Git -> Git Bash</li>
+    </ul>
+    <p>Basic commands:</p>
+    <ul class="raquo_bullets">
+      <li><tt>ls</tt> -- list a directory</li>
+      <li><tt>whoami</tt> -- print my username</li>
+      <li><tt>cd PATHNAME</tt> -- change your current working directory to PATHNAME</li>
+      <li><tt>cd ..</tt> -- move up one level</li>
+    </ul>
+    <p>
+    <span class="button" next="alternatives">Alternatives &raquo;</span>
+    </p>
+  </div>
+
+  <div id="alternatives" class="step">
+    <h1>Alternatives</h1>
+    <p>(Warning: This page is exciting if you are interested in
+      learning about our priorities and lots of other ways to get a
+      command prompt on Windows. If you just want your computer to
+      have a functioning command prompt, and learn how to use it well,
+      read the other pages!)</p>
+
+    <p>There are three major command prompt systems on Windows:</p>
+
+    <ul class="raquo_bullets">
+      <li>cmd.exe</li>
+      <li>Cygwin</li>
+      <li>mingw</li>
+    </ul>
+
+    <p>We recommend a UNIX-y prompt like Cygwin or mingw because the
+    training missions teach how to use tools like tar and
+    git. Installing those without Cygwin or the Git Bash installer can
+    be error-prone and time-consuming.</p>
+
+    <p>In choosing the Git Bash installer over Cygwin, we like that
+    the following aspects:</p>
+
+    <ul class="raquo_bullets">
+      <li>The installer offers relatively few options, compared to Cygwin's long option list.</li>
+      <li>The programs within mingw provide slightly better Windows integration.</li>
+    </ul>
+
+    <p>If you already have Cygwin installed, and are comfortable with
+    it, you should be able to do the training missions within that
+    environment. However, you will not be able to use our recommended
+    instructions for installing software. Git Bash and Cygwin can
+    co-exist peacefully.</p>
+
+    <p>We're aware there are even more alternative options for running
+    UNIX-y tools on Windows. mingw64 is a separate project from
+    ming32, and mingw64 is more actively-maintained. (For example,
+    Debian is standardizing its Windows compiler collection to be
+    based on the mingw64 project's work.) You can run GNU/Linux and
+    Windows at the same time through tools like coLinux and
+    VirtualBox. Microsoft provides a toolkit called Services For
+    Unix, although it seems that they are no longer maintaining it..</p>
+
+    <p>Additionally, the choice of terminal emulator and shell are
+      actually separate. Cygwin and mingw, by default, use the same
+      C/SRSS system that powers cmd.exe. You can run Cygwin and an X
+      server and xterm, for just one alternate configuration; it would
+      look
+      <a href="http://fuckyeahx11.tumblr.com/post/13559856792">something like this</a>.
+      You could use
+      PuTTY as the terminal emulator and the bash bundled with Git
+      Bash. Our tutorial glosses over that difference, but power users
+      might be intrigued by these options.</p>
+
+    <p>For those with who warmly remember GNU-y prompts in Windows and
+    DOS over the past twenty years, I suggest reading
+      <a href="http://en.wikipedia.org/wiki/GnuWin32">the Wikipedia
+    page for GnuWin32 </a> following links from there. I have fond
+    memories of GnuWin32, and you may have enjoyed DJGPP.</p>
+
+    <p>One important note is that the command prompt ("cmd.exe")
+      common thought is that command prompts on Windows are called
+      "DOS."  Since 2001, the accurate term is "command prompt." You
+      can
+      <a href="http://en.wikipedia.org/wiki/History_of_Microsoft_Windows">read more about the history of Windows and DOS on Wikipedia</a>.
+    </p>
+    <p>
+    <span class="button">Hooray! You have finished the mission!</span>
+    </p>
+  </div>
+   
+  <div id="contribute">
+    <p>Created by <a href="http://www.joshmatthews.net">Josh Matthews</a>. Training Mission content added by <a href="http://www.tizianasellitto.it/blog/">Tiziana Sellitto</a>. Patches welcome on <a href="https://github.com/tizianasellitto/trainingmontage">github</a>.  </p>
+</div>
+</body>
+</html>
